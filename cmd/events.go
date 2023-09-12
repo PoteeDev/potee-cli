@@ -9,8 +9,12 @@ import (
 )
 
 type Message struct {
-	Id      int         `json:"id,omitempty"`
-	Message interface{} `json:"message,omitempty"`
+	Id      int    `json:"id,omitempty"`
+	Message Events `json:"message,omitempty"`
+}
+
+type Events struct {
+	Events map[string]RoundInfo
 }
 
 type RoundInfo struct {
@@ -66,6 +70,14 @@ func readEvents() {
 			//fmt.Printf("Received: %+v\n", m)
 			// log.Fatalln(err)
 		}
-		fmt.Printf("Received: %+v\n", m.Message)
+		for id, team := range m.Message.Events {
+			var servicesInfo []string
+			for name, service := range team.Services {
+				servicesInfo = append(servicesInfo, fmt.Sprintf("%s: %d", name, service.PingStatus))
+			}
+			fmt.Println(id, team.TeamName, servicesInfo)
+
+		}
+		fmt.Println()
 	}
 }
