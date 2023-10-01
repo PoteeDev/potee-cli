@@ -1,9 +1,10 @@
-package cmd
+package main
 
 import (
 	"fmt"
 	"os"
 
+	"github.com/PoteeDev/potee-cli/internal"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -14,7 +15,7 @@ var (
 	userLicense string
 
 	rootCmd = &cobra.Command{
-		Use:   "potee-cli",
+		Use:   "potee",
 		Short: "Cli tool to manage Potee Platform",
 	}
 )
@@ -45,14 +46,7 @@ func init() {
 
 }
 
-type Config struct {
-	Host        string `mapstructure:"host"`
-	Username    string `mapstructure:"username"`
-	Password    string `mapstructure:"password"`
-	AccessToken string `mapstructure:"access_token"`
-}
-
-var config = &Config{}
+var config = &internal.Config{}
 
 func initConfig() {
 	//viper.AutomaticEnv()
@@ -76,4 +70,8 @@ func initConfig() {
 	if err := viper.Unmarshal(&config); err != nil {
 		fmt.Println(err)
 	}
+}
+
+func main() {
+	Execute()
 }

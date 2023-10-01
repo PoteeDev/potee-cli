@@ -40,6 +40,8 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/PoteeDev/entities v0.0.0-20230820135949-81720888809f h1:uuboGSbDL0TY1o37IZfCsWy15kSyt0fM53KASm81Jm8=
 github.com/PoteeDev/entities v0.0.0-20230820135949-81720888809f/go.mod h1:Vd+bq5pKFzhekQC2gRlKBwQ+tRe8ctSl1HZyNw51N+k=
+github.com/PoteeDev/events-stream v0.0.0-20230917150915-7635d6014f84 h1:fStuNbgkrNXjweHQ+CM0LzinmJzLPXl7Tg2U21zZMBE=
+github.com/PoteeDev/events-stream v0.0.0-20230917150915-7635d6014f84/go.mod h1:eP3ZC5X+QD1C045c+zbht4C0x+pdK+6Q2X6QbqTRVEY=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=

@@ -4,6 +4,7 @@ go 1.21.0
 
 require (
 	github.com/PoteeDev/entities v0.0.0-20230820135949-81720888809f
+	github.com/PoteeDev/events-stream v0.0.0-20230917150915-7635d6014f84
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
 	golang.org/x/net v0.14.0
