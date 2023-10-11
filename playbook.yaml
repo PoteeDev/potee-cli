@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: show teams
+      potee:
+        admin: teams
+      register: output
+    
+    - debug: msg="{{ output }}"

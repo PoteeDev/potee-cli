@@ -24,7 +24,12 @@ var adminTeamsCmd = &cobra.Command{
 	Use:   "teams",
 	Short: "Show teams",
 	Run: func(cmd *cobra.Command, args []string) {
-		config.ShowTeams()
+		teams := config.ShowTeams()
+		for id, team := range teams {
+			if team.Visible {
+				fmt.Println(id+1, team.Login, team.Name, team.IP)
+			}
+		}
 	},
 }
 

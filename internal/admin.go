@@ -11,7 +11,7 @@ import (
 	"github.com/PoteeDev/entities/models"
 )
 
-func (c *Config) ShowTeams() map[string][]models.EntityInfo {
+func (c *Config) ShowTeams() []models.EntityInfo {
 	url := fmt.Sprintf("%s/api/v1/admin/entities/list", c.Host)
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
@@ -35,7 +35,7 @@ func (c *Config) ShowTeams() map[string][]models.EntityInfo {
 		// for i, entity := range entities["teams"] {
 		// 	fmt.Println(i+1, entity.Login, entity.Name, entity.IP, entity.Visible)
 		// }
-		return entities
+		return entities["teams"]
 	} else {
 		log.Println(resp)
 	}
